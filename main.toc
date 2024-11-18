@@ -1,69 +1,74 @@
 \contentsline {section}{Contents}{1}{section*.1}%
-\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
-\contentsline {section}{\numberline {2}What is the QR Algorithm? \cite {5}}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}The basic QR algorithm}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}The QR Algorithm with well chosen shifts}{4}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Rayleigh Quotient Iteration\cite {9}, \cite {10}}{5}{subsubsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.3}How to find the complex eigen values of a real matrix?}{5}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Schwarz Rutishauser Algorithm For QR Decomposition \cite {7}}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Gram Schmidt Algorithm and its drawbacks}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Schwarz Rutishauser's MGS}{7}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Convergence and Deflation}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Convergence}{8}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Checking whether it has become Upper Hessenberg}{8}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Convergence Epsilon}{8}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Alternate Convergence Epsilon}{9}{subsubsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.2}Deflation}{9}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Deflation $\delta $}{9}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Checking whether it has become Upper Hessenberg Pt. 2}{9}{subsubsection.4.2.2}%
-\contentsline {section}{\numberline {5}Matrix Multiplication Optimization \cite {12}}{10}{section.5}%
-\contentsline {section}{\numberline {6}Performance Overview}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}(Randomly Generated) Real and Symmetric Matrices}{11}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}(Randomly Generated) Real and Non-Symmetric Matrices}{11}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}(Randomly Generated) Complex and Conjugate Symmetric Matrices}{12}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}(Randomly Generated) Complex and Non-Symmetric Matrices}{12}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Code Overview}{13}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Header Inclusions}{13}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Global Constants and Variables}{13}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Evil Functions (Complex Arithmetic)}{14}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Evil Addition}{14}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Evil Subtraction}{14}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}Evil Multiplication}{14}{subsubsection.7.3.3}%
-\contentsline {subsubsection}{\numberline {7.3.4}Evil Division}{14}{subsubsection.7.3.4}%
-\contentsline {subsubsection}{\numberline {7.3.5}Evil Squared Magnitude}{15}{subsubsection.7.3.5}%
-\contentsline {subsubsection}{\numberline {7.3.6}Evil Conjugate}{15}{subsubsection.7.3.6}%
-\contentsline {subsubsection}{\numberline {7.3.7}Evil Scaled Complex}{15}{subsubsection.7.3.7}%
-\contentsline {subsubsection}{\numberline {7.3.8}Evil Equator}{15}{subsubsection.7.3.8}%
-\contentsline {subsubsection}{\numberline {7.3.9}Equality Checker}{15}{subsubsection.7.3.9}%
-\contentsline {subsubsection}{\numberline {7.3.10}Evil Square Root calculator}{15}{subsubsection.7.3.10}%
-\contentsline {subsection}{\numberline {7.4}Matrix And Vector Functions}{16}{subsection.7.4}%
-\contentsline {subsubsection}{\numberline {7.4.1}Nuller Function}{16}{subsubsection.7.4.1}%
-\contentsline {subsubsection}{\numberline {7.4.2}Matrix Multiplication}{16}{subsubsection.7.4.2}%
-\contentsline {subsubsection}{\numberline {7.4.3}Matrix Scaling}{17}{subsubsection.7.4.3}%
-\contentsline {subsubsection}{\numberline {7.4.4}Matrix Addition}{17}{subsubsection.7.4.4}%
-\contentsline {subsubsection}{\numberline {7.4.5}Matrix Subtraction}{17}{subsubsection.7.4.5}%
-\contentsline {subsubsection}{\numberline {7.4.6}Matrix EYE}{17}{subsubsection.7.4.6}%
-\contentsline {subsubsection}{\numberline {7.4.7}Vector Insertion}{18}{subsubsection.7.4.7}%
-\contentsline {subsubsection}{\numberline {7.4.8}Vector Extraction}{18}{subsubsection.7.4.8}%
-\contentsline {subsubsection}{\numberline {7.4.9}Complex Inner Product}{18}{subsubsection.7.4.9}%
-\contentsline {subsubsection}{\numberline {7.4.10}Complex Norm}{18}{subsubsection.7.4.10}%
-\contentsline {subsubsection}{\numberline {7.4.11}Matrix Printing Function}{18}{subsubsection.7.4.11}%
-\contentsline {subsubsection}{\numberline {7.4.12}Vector Printing Function}{19}{subsubsection.7.4.12}%
-\contentsline {subsection}{\numberline {7.5}Convergence Functions}{19}{subsection.7.5}%
-\contentsline {subsubsection}{\numberline {7.5.1}Principal Diagonal and Subdiagonal Extractor}{19}{subsubsection.7.5.1}%
-\contentsline {subsubsection}{\numberline {7.5.2}Principal Diagonal and Subdiagonal Updater}{19}{subsubsection.7.5.2}%
-\contentsline {subsubsection}{\numberline {7.5.3}Principal Diagonal and Subdiagonal Divergence Vector Calculator}{20}{subsubsection.7.5.3}%
-\contentsline {subsubsection}{\numberline {7.5.4}Hessenberg Checking Function}{20}{subsubsection.7.5.4}%
-\contentsline {subsubsection}{\numberline {7.5.5}Convergence Checking Function}{20}{subsubsection.7.5.5}%
-\contentsline {subsection}{\numberline {7.6}Deflation Functions}{21}{subsection.7.6}%
-\contentsline {subsubsection}{\numberline {7.6.1}Matrix Deflate}{21}{subsubsection.7.6.1}%
-\contentsline {subsection}{\numberline {7.7}Eigen Value Relevant Functions}{21}{subsection.7.7}%
-\contentsline {subsubsection}{\numberline {7.7.1}Naive Schur Calculation}{21}{subsubsection.7.7.1}%
-\contentsline {subsubsection}{\numberline {7.7.2}Schur Calculation with Shifts}{21}{subsubsection.7.7.2}%
-\contentsline {subsubsection}{\numberline {7.7.3}Eigen Value Calculator From Schur}{22}{subsubsection.7.7.3}%
-\contentsline {subsection}{\numberline {7.8}main( void )}{22}{subsection.7.8}%
-\contentsline {subsection}{\numberline {7.9}Execution Script}{23}{subsection.7.9}%
-\contentsline {subsection}{\numberline {7.10}Data Collection Script}{23}{subsection.7.10}%
-\contentsline {section}{\numberline {8}Performance Considerations}{24}{section.8}%
-\contentsline {section}{\numberline {9}References}{24}{section.9}%
-\contentsline {section}{References}{24}{section*.7}%
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
+\contentsline {section}{\numberline {2}What is the QR Algorithm? \cite {5}}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The basic QR algorithm}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}The QR Algorithm with well chosen shifts}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Rayleigh Quotient Iteration\cite {9}, \cite {10}}{6}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}How to find the complex eigen values of a real matrix?}{6}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Schwarz Rutishauser Algorithm For QR Decomposition \cite {7}}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Gram Schmidt Algorithm and its drawbacks}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Schwarz Rutishauser's MGS}{8}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Convergence and Deflation}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Convergence}{9}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Checking whether it has become Upper Hessenberg}{9}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Convergence Epsilon}{9}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Alternate Convergence Epsilon}{10}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}Deflation}{10}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Deflation $\delta $}{10}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Checking whether it has become Upper Hessenberg Pt. 2}{10}{subsubsection.4.2.2}%
+\contentsline {section}{\numberline {5}Matrix Multiplication Optimization \cite {12}}{11}{section.5}%
+\contentsline {section}{\numberline {6}Performance Overview}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}(Randomly Generated) Real and Symmetric Matrices With Aggressive Deflation}{12}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}(Randomly Generated) Real and Non-Symmetric Matrices With Aggressive Deflation}{12}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}(Randomly Generated) Complex and Conjugate Symmetric Matrices With Aggressive Deflation}{13}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}(Randomly Generated) Complex and Non-Symmetric Matrices With Aggressive Deflation}{13}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}(Randomly Generated) Real and Non-Symmetric Matrices Without Aggressive Deflation}{14}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}(Randomly Generated) Complex and Non-Symmetric Matrices Without Aggressive Deflation}{14}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Comparison Of Aggressive and Non Agressive Deflation in Random Real Matrices}{15}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Comparison Of Aggressive and Non Agressive Deflation in Random Complex Matrices}{15}{subsection.6.8}%
+\contentsline {section}{\numberline {7}Time Complexity Analysis}{16}{section.7}%
+\contentsline {section}{\numberline {8}Code Overview}{16}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Header Inclusions}{16}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Global Constants and Variables}{16}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Evil Functions (Complex Arithmetic)}{17}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Evil Addition}{17}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Evil Subtraction}{17}{subsubsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.3}Evil Multiplication}{18}{subsubsection.8.3.3}%
+\contentsline {subsubsection}{\numberline {8.3.4}Evil Division}{18}{subsubsection.8.3.4}%
+\contentsline {subsubsection}{\numberline {8.3.5}Evil Squared Magnitude}{18}{subsubsection.8.3.5}%
+\contentsline {subsubsection}{\numberline {8.3.6}Evil Conjugate}{18}{subsubsection.8.3.6}%
+\contentsline {subsubsection}{\numberline {8.3.7}Evil Scaled Complex}{18}{subsubsection.8.3.7}%
+\contentsline {subsubsection}{\numberline {8.3.8}Evil Equator}{19}{subsubsection.8.3.8}%
+\contentsline {subsubsection}{\numberline {8.3.9}Equality Checker}{19}{subsubsection.8.3.9}%
+\contentsline {subsubsection}{\numberline {8.3.10}Evil Square Root calculator}{19}{subsubsection.8.3.10}%
+\contentsline {subsection}{\numberline {8.4}Matrix And Vector Functions}{19}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}Nuller Function}{19}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}Matrix Multiplication}{19}{subsubsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.3}Matrix Scaling}{20}{subsubsection.8.4.3}%
+\contentsline {subsubsection}{\numberline {8.4.4}Matrix Addition}{20}{subsubsection.8.4.4}%
+\contentsline {subsubsection}{\numberline {8.4.5}Matrix Subtraction}{20}{subsubsection.8.4.5}%
+\contentsline {subsubsection}{\numberline {8.4.6}Matrix EYE}{21}{subsubsection.8.4.6}%
+\contentsline {subsubsection}{\numberline {8.4.7}Vector Insertion}{21}{subsubsection.8.4.7}%
+\contentsline {subsubsection}{\numberline {8.4.8}Vector Extraction}{21}{subsubsection.8.4.8}%
+\contentsline {subsubsection}{\numberline {8.4.9}Complex Inner Product}{21}{subsubsection.8.4.9}%
+\contentsline {subsubsection}{\numberline {8.4.10}Complex Norm}{22}{subsubsection.8.4.10}%
+\contentsline {subsubsection}{\numberline {8.4.11}Matrix Printing Function}{22}{subsubsection.8.4.11}%
+\contentsline {subsubsection}{\numberline {8.4.12}Vector Printing Function}{22}{subsubsection.8.4.12}%
+\contentsline {subsection}{\numberline {8.5}Convergence Functions}{22}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}Principal Diagonal and Subdiagonal Extractor}{22}{subsubsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.2}Principal Diagonal and Subdiagonal Updater}{23}{subsubsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.3}Principal Diagonal and Subdiagonal Divergence Vector Calculator}{23}{subsubsection.8.5.3}%
+\contentsline {subsubsection}{\numberline {8.5.4}Hessenberg Checking Function}{23}{subsubsection.8.5.4}%
+\contentsline {subsubsection}{\numberline {8.5.5}Convergence Checking Function}{24}{subsubsection.8.5.5}%
+\contentsline {subsection}{\numberline {8.6}Deflation Functions}{24}{subsection.8.6}%
+\contentsline {subsubsection}{\numberline {8.6.1}Matrix Deflate}{24}{subsubsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.7}Eigen Value Relevant Functions}{24}{subsection.8.7}%
+\contentsline {subsubsection}{\numberline {8.7.1}Naive Schur Calculation}{24}{subsubsection.8.7.1}%
+\contentsline {subsubsection}{\numberline {8.7.2}Schur Calculation with Shifts}{25}{subsubsection.8.7.2}%
+\contentsline {subsubsection}{\numberline {8.7.3}Eigen Value Calculator From Schur}{25}{subsubsection.8.7.3}%
+\contentsline {subsection}{\numberline {8.8}main( void )}{26}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.9}Execution Script}{26}{subsection.8.9}%
+\contentsline {subsection}{\numberline {8.10}Data Collection Script}{26}{subsection.8.10}%
+\contentsline {section}{\numberline {9}Performance Considerations}{27}{section.9}%
+\contentsline {section}{\numberline {10}References}{27}{section.10}%
+\contentsline {section}{References}{27}{section*.11}%

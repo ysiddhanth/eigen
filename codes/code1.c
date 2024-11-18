@@ -6,9 +6,9 @@
 #include <unistd.h>     
 #include "evil.h"
 #include <string.h>
-#define n 3
-#define epsilon 1e-3
-#define delta 1e-3
+#define n 100
+#define epsilon 1e-4
+#define delta 1e-4
 #include <stdint.h>
 // temp vars;
 double t[n][n][2] = {0};
@@ -279,14 +279,13 @@ int schur(double A[n][n][2]){
 int schurshift(double A[n][n][2]){
   double Q[n][n][2]={0}, R[n][n][2]={0}, U[n][n][2]; int i=0;
   while(i<10000){
+    //transmat(A,A);
     eye(U,A[n-1][n-1]);
     matsub(A,U,A);
     qr(A,Q,R);
-    printmat(Q);
-    printf("\n\n\n");
     matmult(R,Q,A);
     matadd(A,U,A);
-    deflate(A);
+    //deflate(A);
     if(isConverged(A) || isHessenberg(A)){
       return i+1;
     }
@@ -323,19 +322,18 @@ void eigen(double a[n][n][2]){
 }
 int main(void){
   //double A[n][n][2] = {{{4,0},{1,0},{1,0},{7,4}},{{8,1},{3,3},{4,2},{3,4}},{{7,2},{5,3},{6,1},{2,9}},{{1,3},{4,7},{8,0},{2,3}}};
-  double A[n][n][2] = {{{1,0},{1,0},{0,0}},{{1,0},{0,0},{1,0}},{{0,0},{1,0},{1,0}}};
+  //double A[n][n][2] = {{{1,0},{1,0},{0,0}},{{1,0},{0,0},{1,0}},{{0,0},{1,0},{1,0}}};
   //double A[2][2][2] = {{{1,0},{1,0}},{{-4,0},{-2,0}}};
   
   FILE *out = fopen("out.dat", "a");
-  /*
   double A[n][n][2];
   srand(time(NULL));
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            A[i][j][0] = (double)rand()/RAND_MAX - 0.5;
-            A[i][j][1] = (double)rand()/RAND_MAX - 0.5;
+            A[i][j][0] = (double)rand()/10;
+            A[i][j][1] = (double)rand()/10;
         }
-    }*/
+    }
   //printmat(A);
   int k=0;
   double start_time = omp_get_wtime();

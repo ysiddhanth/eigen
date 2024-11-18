@@ -293,32 +293,59 @@
  	Basically, we can see that the methods with the index j in the very inner loop achieve the best performance in terms of the running time, 7.82s and 7.77s respectively. The reason for this has to do with how the data is stored and accessed during the computation.
  	\newpage
  	\section{Performance Overview} 
- 	\subsection{(Randomly Generated) Real and Symmetric Matrices}
+ 	\subsection{(Randomly Generated) Real and Symmetric Matrices With Aggressive Deflation}
  	\begin{figure}[h]
  		\centering
  		\includegraphics[width=0.85\textwidth]{figs/rrs.png}
  		\caption{Purely Real Randomly Generated Symmetric Matrix.}
  	\end{figure}
- 	\subsection{(Randomly Generated) Real and Non-Symmetric Matrices}
+ 	\subsection{(Randomly Generated) Real and Non-Symmetric Matrices With Aggressive Deflation}
  	\begin{figure}[h]
  		\centering
  		\includegraphics[width=0.85\textwidth]{figs/rrns.png}
  		\caption{Purely Real Randomly Generated Non-Symmetric Matrix.}
  	\end{figure}
- 	\subsection{(Randomly Generated) Complex and Conjugate Symmetric Matrices}
+ 	\subsection{(Randomly Generated) Complex and Conjugate Symmetric Matrices With Aggressive Deflation}
  	\begin{figure}[h]
  		\centering
  		\includegraphics[width=0.85\textwidth]{figs/crs.png}
  		\caption{Complex Randomly Generated Conjugate Symmetric Matrix.}
  	\end{figure}
- 	\subsection{(Randomly Generated) Complex and Non-Symmetric Matrices}
+ 	\subsection{(Randomly Generated) Complex and Non-Symmetric Matrices With Aggressive Deflation}
  	\begin{figure}[h]
  		\centering
  		\includegraphics[width=0.85\textwidth]{figs/crns.png}
  		\caption{Complex Randomly Generated Non-Symmetric Matrix.}
  	\end{figure}
- 	
+ 	\subsection{(Randomly Generated) Real and Non-Symmetric Matrices Without Aggressive Deflation}
+ 	\begin{figure}[h]
+ 		\centering
+ 		\includegraphics[width=0.85\textwidth]{figs/rrnsnd.png}
+ 		\caption{Purely Real Randomly Generated Non-Symmetric Matrix.}
+ 	\end{figure}
+ 	\subsection{(Randomly Generated) Complex and Non-Symmetric Matrices Without Aggressive Deflation}
+ 	\begin{figure}[h]
+ 		\centering
+ 		\includegraphics[width=0.85\textwidth]{figs/crnsnd.png}
+ 		\caption{Complex Randomly Generated Non-Symmetric Matrix.}
+ 	\end{figure}
+ 	\subsection{Comparison Of Aggressive and Non Agressive Deflation in Random Real Matrices}
+ 	\begin{figure}[h]
+ 		\centering
+ 		\includegraphics[width=0.85\textwidth]{figs/com1.png}
+ 		\caption{Clearly We can see that Non Deflation is more stable where as the Agressive deflation is faster.}
+ 	\end{figure}
+ 	\subsection{Comparison Of Aggressive and Non Agressive Deflation in Random Complex Matrices}
+ 	\begin{figure}[h]
+ 		\centering
+ 		\includegraphics[width=0.85\textwidth]{figs/com2.png}
+ 		\caption{Clearly We can see that Non Deflation is more stable where as the Agressive deflation is clearly much faster.}
+ 	\end{figure}
  	\newpage
+ 	\section{Time Complexity Analysis}
+ 	\textbf{Time Complexity to Converge and Deflate: } $O(n^2)$\\
+ 	\textbf{QR Algorithm With SRA}: Time complexity is $O(n^3)$\\
+ 	Thus the overall time complexity is $O(n^3)$.
 	\section{Code Overview}
 	The implementation includes a set of functions defined in C to perform various matrix operations. The code is structured with a focus on complex number arithmetic.
 	

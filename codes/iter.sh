@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Execution Times (n=1 to n=1000)"
-for ((k=200; k<=1000; k = k+50))
+echo "Execution Times (n=2 to n=100)"
+for ((k=2; k<=100; k++))
 do
     sed -i "9s/.*/#define n $k/" code1.c
     bash make.sh
