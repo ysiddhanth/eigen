@@ -199,7 +199,7 @@
 		Now, we will define some $\epsilon$. When every element in the divergence vector is less than the $\epsilon$ we have defined, then we can say that the matrix has converged.\\ 
 		The real question is, how do we find the $\epsilon$?\\
 		For a $3\times 3$ and a $4 \times 4$ matrix with all single digit complex elements, we will experiment different epsilons, and find the number of iterations it takes to converge:
-		\begin{table}[ht]
+		\begin{table}[H]
 			\centering
 			\begin{minipage}{0.45\textwidth}
 				\centering
@@ -241,13 +241,12 @@
 				\caption{Table for $\epsilon - 4$}
 			\end{minipage}
 		\end{table}
-		\subsubsection{Alternate Convergence Epsilon}
-		In the original method we are comparing each element of the divergence vector to the convergence $\epsilon$. Rather we can compare the norm of the divergence vector to the convergence $\epsilon$.
+		\textbf{High Accuracy Approach}: If number of iterations and computation time is insignficant, then keeping $\epsilon = 1e-15 \text{ or } 0$ is the best approach. It is guaranteed to give very accurate eigen values, but is very time consuming and resource draining. \\
+		\textbf{High Performance Approach}: If number of iterations and computation time do matter, then keeping $\epsilon = 1e-4 $ or keeping the eigen values till 4 digits of accuracy is the best approach. This approach is good for applications satisfied with a fixed amount of accuracy in eigen values.
 
 		Clearly for the $4\times 4$, the matrix converges at an $\epsilon = 1e-6$ where as for the $3\times 3$, it is $1e-1$. We can see that we have two approaches from here on, \textbf{High Accuracy} or \textbf{High Performance}.\\
-		\textbf{High Accuracy Approach}: If number of iterations and computation time is insignficant, then keeping $\epsilon = 1e-15 \text{ or } 0$ is the best approach. It is guaranteed to give very accurate eigen values, but is very time consuming and resource draining. \\
-		\textbf{High Accuracy Approach}: If number of iterations and computation time do matter, then keeping $\epsilon = 1e-4 $ or keeping the eigen values till 4 digits of accuracy is the best approach. This approach is good for applications satisfied with a fixed amount of accuracy in eigen values.
-		
+		\subsubsection{Alternate Convergence Epsilon}
+		In the original method we are comparing each element of the divergence vector to the convergence $\epsilon$. Rather we can compare the norm of the divergence vector to the convergence $\epsilon$.
 		\subsection{Deflation}
 		As the number of iterations increase in large matrices, the elements don't really converge to zero. Even after a horrendous amount of iterations, the elements which are supposed to become zero, become a very close value to zero.\\
 		Example: Consider a $100 \times 100$ matrix, and now we will compute QR without the convergence tests. When the iteration number is 10000, we expect the matrix to converge into Upper Hessenberg, but instead of the zeroes we have incredibly small values like $1e-32, 1e-256, 1e-15$. \\
