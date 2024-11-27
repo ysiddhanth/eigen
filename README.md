@@ -47,32 +47,11 @@ $$A_k = Q_k^* A_{k-1} Q_k = Q_k^* Q_{k-1}^* A_{k-2} Q_{k-1} Q_k = \cdots = Q_k^*
 
 With the same assumption on the eigenvalues, $A_k$ tends to an upper
 hessenberg matrix.
-
-::: algorithm
-::: algorithmic
-Let $A \in \mathbb{C}^{n \times n}$. This algorithm computes an upper
-hessenberg matrix $T$ and a unitary matrix $U$ such that $A = UTU^*$ is
-the Schur decomposition of $A$. Set $A_0 := A$ and $U_0 := I$.
-$A_{k-1} = Q_k R_k;$ $A_k = R_k Q_k;$ $U_k := U_{k-1} Q_k;$ Set
-$T := A_{\infty}$ and $U := U_{\infty}.$
-:::
-:::
-
 ## The QR Algorithm with well chosen shifts
 
 We notice first that $$A_k = R_k Q_k = Q_k^* A_{k-1} Q_k,$$ With a
 slight modification to our naive QR algorithm, we can reduce the
 computational cost significantly. This is by the use of shifts $\mu_k$.
-
-::: algorithm
-::: algorithmic
-Let $A \in \mathbb{C}^{n \times n}$. This algorithm computes an upper
-triangular matrix $T$ and a unitary matrix $U$ such that $A = UTU^*$ is
-the Schur decomposition of $A$ using shifts. Set $A_0 := A$.
-$A_{k-1} = Q_k R_k - \mu_{k-1} I;$ $A_k = R_k Q_k + \mu_{k-1} I;$ Set
-$T := A_{\infty}.$
-:::
-:::
 
 ### Rayleigh Quotient Iteration[@9], [@10]
 
@@ -98,18 +77,6 @@ The idea is to use continually improving eigenvalue estimates to
 increase the rate of convergence of the QR iteration at every step. This
 algorithm is called Rayleigh quotient iteration.
 
-::: algorithm
-::: algorithmic
-Let $A \in \mathbb{C}^{n \times n}$. This algorithm computes an upper
-triangular matrix $T$ and a unitary matrix $U$ such that $A = UTU^*$ is
-the Schur decomposition of $A$ using shifts. Set $A_0 := A$ and $x_0$ as
-some vector with $||x_0||= 1$ $\mu_{k-1} = r(x_{k-1});$
-$A_{k-1} = Q_k R_k - \mu_{k-1} I;$ $A_k = R_k Q_k + \mu_{k-1} I;$ Find
-an $\omega$ for which $(A_k -\mu_{k-1} I)\omega = x_{k-1}$;
-$x_k = \omega / ||\omega||$; Set $T := A_{\infty}.$
-:::
-:::
-
 ## How to find the complex eigen values of a real matrix?
 
 We can clearly see that the Schur decomposition of a real matrix will
@@ -121,23 +88,6 @@ matrix. But if the eigen values of the matrix are complex, then the
 Schur of the matrix will converge to an **Upper Hessenberg Matrix**. Now
 the true complex eigen values will depend on the sub-diagonal above and
 below the principal diagonal containing the pseudo-eigen values.
-
-::: algorithm
-::: algorithmic
-A matrix $a \in \mathbb{R}^{n \times n}$ Eigenvalues $eig$ Initialize
-$i = 0$ $eig[i]  = a[i][i]$ $i \rightarrow i + 1$ continue Extract the
-2x2 submatrix
-$M = \begin{pmatrix} a[i][i] & a[i][i+1] \\ a[i+1][i] & a[i+1][i+1] \end{pmatrix}$
-Compute the trace and determinant of the submatrix:
-$b \rightarrow a[i][i] + a[i+1][i+1]$ (trace)
-$c \rightarrow a[i][i] \cdot a[i+1][i+1] - a[i][i+1] \cdot a[i+1][i]$
-(determinant) $\lambda_1, \lambda_2 = \frac{b \pm \sqrt{b^2 - 4c}}{2}$
-Store the eigenvalues: $eig[i] \rightarrow \lambda_1$,
-$eig[i+1] \rightarrow \lambda_2$ $i \rightarrow i + 2$
-:::
-:::
-
-# Schwarz Rutishauser Algorithm For QR Decomposition [@7]
 
 ## Gram Schmidt Algorithm and its drawbacks
 
@@ -152,19 +102,6 @@ $\mathbf{a}_k \in \mathbf{A}$. Finally, the upper triangular matrix
 $\mathbf{R}$ can be easily obtained as the product of
 $\mathbf{Q}$'s-transpose and matrix $\mathbf{A}$.
 
-::: algorithm
-::: algorithmic
-Matrix $A \in \mathbb{R}^{m \times n}$ Orthonormal matrix $Q$ and upper
-triangular matrix $R$ such that $A = QR$ Initialize $Q = A$,
-$R = 0_{n \times n}$ Compute the norm: $R[k,k] = \|Q[:,k]\|$ Normalize
-the column: $Q[:,k] = Q[:,k] / R[k,k]$ Compute projection:
-$R[k,j] = Q[:,k]^T \cdot Q[:,j]$ Cumulative projection sum :
-$S = S + R[k,j] \cdot Q[:,j]$ $Q[:,k] = Q[:,k] - S$\
-$Q, R$
-:::
-:::
-
-\
 The classical Gram-Schmidt orthogonalization is an enormously complex
 algorithm, caused by the computation of the orthogonal vector projection
 of each vector $\mathbf{a}_k \in \mathbf{A}$ onto vectors
@@ -178,18 +115,6 @@ The Schwarz-Rutishauser algorithm is a modification of the classical
 Gram-Schmidt orthogonalization process, proposed by H. R. Schwarz, H.
 Rutishauser and E. Stiefel, in their research paper "Numerik
 symmetrischer Matrizen" (Stuttgart, 1968) . [@11]
-
-::: algorithm
-::: algorithmic
-Matrix $A \in \mathbb{R}^{m \times n}$ Orthonormal matrix $Q$ and upper
-triangular matrix $R$ such that $A = QR$ Initialize $Q = A$,
-$R = 0_{n \times n}$ Compute projection:
-$R[k,j] = Q[:,k]^T \cdot Q[:,j]$ Subtract projection directly from
-$Q[:,k]$: $Q[:,k] = Q[:,k] - R[k,j] \cdot Q[:,j]$ Compute the norm:
-$R[k,k] = \|Q[:,k]\|$ Normalize the column: $Q[:,k] = Q[:,k] / R[k,k]$\
-$Q, R$
-:::
-:::
 
 # Convergence and Deflation
 
