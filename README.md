@@ -285,39 +285,27 @@ data is stored and accessed during the computation.
 
 ## (Randomly Generated) Real and Symmetric Matrices
 
-<figure>
-<span class="image placeholder" data-original-image-src="figs/rrs.png"
-data-original-image-title="" width="85%"></span>
-<figcaption>Purely Real Randomly Generated Symmetric
-Matrix.</figcaption>
-</figure>
+![Purely Real Randomly Generated Symmetric Matrix.](figs/rrs.png)
 
 ## (Randomly Generated) Real and Non-Symmetric Matrices
 
-<figure>
-<span class="image placeholder" data-original-image-src="figs/rrns.png"
-data-original-image-title="" width="85%"></span>
-<figcaption>Purely Real Randomly Generated Non-Symmetric
-Matrix.</figcaption>
-</figure>
+![Purely Real Randomly Generated Non-Symmetric Matrix.](figs/rrns.png)
 
 ## (Randomly Generated) Complex and Conjugate Symmetric Matrices
 
-<figure>
-<span class="image placeholder" data-original-image-src="figs/crs.png"
-data-original-image-title="" width="85%"></span>
-<figcaption>Complex Randomly Generated Conjugate Symmetric
-Matrix.</figcaption>
-</figure>
+![Complex Randomly Generated Conjugate Symmetric Matrix.](figs/crs.png)
 
 ## (Randomly Generated) Complex and Non-Symmetric Matrices
 
-<figure>
-<span class="image placeholder" data-original-image-src="figs/crns.png"
-data-original-image-title="" width="85%"></span>
-<figcaption>Complex Randomly Generated Non-Symmetric
-Matrix.</figcaption>
-</figure>
+![Complex Randomly Generated Non-Symmetric Matrix.](figs/crns.png)
+
+## (Randomly Generated) Read Symmetric Matrices Comparison
+
+![Complex Randomly Generated Conjugate Symmetric Matrix.](figs/com1.png)
+
+## (Randomly Generated) Complex Symmetric Matrices Comparison
+
+![Complex Randomly Generated Non-Symmetric Matrix.](figs/com2.png)
 
 # Code Overview
 
