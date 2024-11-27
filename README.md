@@ -4,7 +4,7 @@ author:
 title: QR Algorithm based on SRA with Aggressive Deflation
 ---
 
-# Introduction
+# Just a naive eigen value calculator using C....
 
 This report documents the implementation of optimized matrix operations
 and making of the Schwarz Rutishauser Algorithm for QR decomposition in
